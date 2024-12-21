@@ -24,6 +24,7 @@ const PoliciesComplianceSection = () => {
     link.click();
   };
 
+
   const legalDocuments = [
     {
       category: "Driver Agreements",
@@ -163,6 +164,24 @@ const PoliciesComplianceSection = () => {
     }
   ];
 
+  const handleDownloadAll = () => {
+    const allFilePaths = legalDocuments.flatMap(category => 
+      category.documents.map(doc => doc.filepath)
+    );
+
+    console.log(allFilePaths)
+    allFilePaths.forEach((filePath, index) => {
+      setTimeout(() => {
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.download = filePath.split('/').pop() || `document-${index + 1}`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, index * 500); // 500ms delay between downloads to avoid browser throttling
+    });
+  };
+
   return (
     <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -185,11 +204,11 @@ const PoliciesComplianceSection = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-2xl font-bold text-white mb-2">Essential Documents</h3>
-              <p className="text-gray-400">
+              <button  className="text-gray-400">
                 Download and review all required documentation for Swift! drivers
-              </p>
+              </button>
             </div>
-            <button className="flex items-center space-x-2 bg-yellow-400 text-black px-6 py-3 
+            <button onClick={()=>{handleDownloadAll()}} className="flex items-center space-x-2 bg-yellow-400 text-black px-6 py-3 
               rounded-xl hover:bg-yellow-300 transition-colors">
               <Download className="w-5 h-5" />
               <span>Download All Documents</span>
@@ -277,7 +296,7 @@ const PoliciesComplianceSection = () => {
         </div>
 
         {/* Help Section */}
-        <div className="mt-16 bg-yellow-400 rounded-2xl p-8">
+        {/* <div className="mt-16 bg-yellow-400 rounded-2xl p-8">
           <div className="flex items-start space-x-6">
             <div className="bg-black rounded-xl p-4">
               <HelpCircle className="w-6 h-6 text-white" />
@@ -294,7 +313,7 @@ const PoliciesComplianceSection = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

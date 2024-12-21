@@ -191,11 +191,11 @@ const ResourcesHeroSection = () => {
                   {item.description}
                 </p>
                 
-                <div className="flex items-center justify-between text-sm">
+                <Link href='#download' className="flex items-center justify-between text-sm">
                   <span className="text-gray-500">{item.count}</span>
                   <ExternalLink className="w-5 h-5 text-yellow-400 group-hover:translate-x-1 
                     transition-transform" />
-                </div>
+                </Link>
               </button>
             ))}
           </div>
