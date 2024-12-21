@@ -27,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

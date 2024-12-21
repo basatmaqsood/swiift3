@@ -119,7 +119,7 @@ const OpenPositionsSection = () => {
   };
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-24" id='open-positions'>
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

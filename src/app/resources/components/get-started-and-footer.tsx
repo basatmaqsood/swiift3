@@ -182,8 +182,7 @@ const GetStartedAndFooter = () => {
                   Swift<span className="text-yellow-400">!</span>
                 </h3>
                 <p className="text-gray-600 mt-2">
-                  South Africa&apos;s most innovative e-hailing service, committed to safety,
-                  reliability, and driver success.
+                  South Africa&apos;s most innovative e-hailing service.
                 </p>
               </div>
               <div className="space-y-4">

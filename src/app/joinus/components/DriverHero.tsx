@@ -123,9 +123,7 @@ const DriverHero = () => {
                   <span>Start Earning Today</span>
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link href="#" className="hidden md:block bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-medium text-lg hover:bg-white/20 transition-colors">
-                  Learn More
-                </Link>
+
               </div>
             </div>
           </div>

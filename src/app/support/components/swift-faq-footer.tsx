@@ -158,7 +158,7 @@ const FAQSection = () => {
                 </h3>
                 <p className="text-gray-600 mt-2">
                 </p>
-                  South Africa&apos/s most innovative e-hailing service.
+                  South Africa&apos;s most innovative e-hailing service.
               </div>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3 text-gray-600">

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { CheckCircle, ArrowRight, PhoneCall, Users, Briefcase } from 'lucide-react';
+import Link from 'next/link';
 
 const RecruitmentProcess = () => {
   const steps = [
@@ -105,7 +106,7 @@ const RecruitmentProcess = () => {
 
                 {index === steps.length - 1 && (
                   <button className="inline-flex items-center bg-black text-white px-6 py-3 rounded-xl font-medium hover:bg-yellow-400 hover:text-black transition-all duration-300 group mt-6">
-                    <span>View Open Positions</span>
+                    <Link href='#open-positions'>View Open Positions</Link>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 )}
