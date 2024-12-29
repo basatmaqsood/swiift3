@@ -187,7 +187,7 @@ const NewsAndFooter = () => {
 
               <div className="relative lg:h-[600px] p-8 flex items-center justify-center">
                 <img 
-                  src="/desktop.webp" 
+                  src="/downloadGirl.jpg" 
                   alt="Swift App Interface"
                   className="rounded-2xl h-full object-cover shadow-lg"
                 />
