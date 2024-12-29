@@ -116,9 +116,9 @@ const RecruitmentProcess = () => {
               <div className="flex-1">
                 <div className="relative">
                   {/* Number Background */}
-                  <div className="absolute -right-6 -top-6 text-9xl font-bold text-yellow-400/10 select-none">
+                  {/* <div className="absolute -right-6 -top-6 text-9xl font-bold text-yellow-400/10 select-none">
                     {step.number}
-                  </div>
+                  </div> */}
                   
                   {/* Image Container */}
                   <div className="relative rounded-2xl overflow-hidden bg-white p-4 shadow-xl">
@@ -137,7 +137,7 @@ const RecruitmentProcess = () => {
         </div>
 
         {/* Timeline Connector */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-yellow-400/20" />
+        {/* <div className="absolute left-1/2 top-0 bottom-0 w-px bg-yellow-400/20" /> */}
       </div>
     </section>
   );
