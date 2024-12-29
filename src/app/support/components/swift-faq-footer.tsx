@@ -7,7 +7,9 @@ import {
   Facebook, 
   Instagram, 
   Twitter, 
-  MapPin
+  MapPin,
+  CarFront,
+  User
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -76,7 +78,7 @@ const FAQSection = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <span className="bg-yellow-400/10 rounded-lg p-2 mr-3">
-                  <Phone className="w-5 h-5 text-yellow-400" />
+                  <User className="w-5 h-5 text-yellow-400" />
                 </span>
                 For Riders
               </h3>
@@ -111,7 +113,7 @@ const FAQSection = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <span className="bg-yellow-400/10 rounded-lg p-2 mr-3">
-                  <MapPin className="w-5 h-5 text-yellow-400" />
+                  <CarFront className="w-5 h-5 text-yellow-400" />
                 </span>
                 For Drivers
               </h3>
