@@ -182,6 +182,13 @@ const NewsAndFooter = () => {
                       className="w-auto h-12  "
                     />
                   </button>
+                  <button className=" hover:bg-yellow-400 transition-colors rounded-xl">
+                    <img 
+                      src="huaweiStore.jpg" 
+                      alt="Play Store" 
+                      className="w-auto h-12  "
+                    />
+                  </button>
                 </div>
               </div>
 

@@ -102,7 +102,7 @@ const DriverAppSection = () => {
               {/* Download Buttons - Side by side */}
               <div className="flex items-center space-x-4">
                 {/* App Store Button */}
-                <Link href="#">
+                <a href="#">
                   <img
                     src='appstore.jpg'
                     alt="App Store" 
@@ -110,17 +110,24 @@ const DriverAppSection = () => {
                     height={48}
                   />
                   
-                </Link>
+                </a>
 
                 {/* Play Store Button */}
-                <Link href="#">
+                <a href="#">
                   <img
                     src='googleplay.png'
                     alt="Play Store" 
                     width={165}
                     height={48}
                   />
-                  </Link>
+                  </a>
+                  <a href='#' className=" hover:bg-yellow-400 transition-colors rounded-xl">
+                    <img 
+                      src="huaweiStore.jpg" 
+                      alt="Play Store" 
+                      className="w-auto h-12  "
+                    />
+                  </a>
               </div>
             </div>
 

@@ -102,6 +102,13 @@ const DownloadAndFooter = () => {
                   alt="Get it on Google Play" 
                 />
               </a>
+              <a href='#' className=" hover:bg-yellow-400 transition-colors rounded-xl">
+                    <img 
+                      src="huaweiStore.jpg" 
+                      alt="Play Store" 
+                      className="w-auto h-12  "
+                    />
+                  </a>
             </div>
           </div>
         </div>
