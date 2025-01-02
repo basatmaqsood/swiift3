@@ -96,7 +96,7 @@ const SupportChatSection = () => {
                       : "bg-blue-400 hover:bg-blue-300 text-gray-900"
                   } text-white py-4 rounded-xl font-medium transition-colors flex items-center justify-center space-x-2`}
                 >
-                  <span>Start Chat</span>
+                  <a target="_blank" href={`${title == 'Rider Emergency Chat'?'https://wa.me/0649423201':'https://wa.me/0729841620'}`}>Start Chat</a>
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </div>

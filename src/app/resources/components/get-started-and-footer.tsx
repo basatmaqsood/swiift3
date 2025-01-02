@@ -66,8 +66,8 @@ const GetStartedAndFooter = () => {
     company: [
       { title: 'About Us', href: '/aboutus' },
       { title: 'Careers', href: '/careers' },
-      { title: 'Press', href: '/#' },
-      { title: 'Blog', href: '/#' }
+      // { title: 'Press', href: '/#' },
+      // { title: 'Blog', href: '/#' }
     ],
     legal: [
       { title: 'Terms of Service', href: '/resources#terms' },
@@ -161,7 +161,7 @@ const GetStartedAndFooter = () => {
             <button className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 
               rounded-xl font-medium hover:bg-yellow-300 transition-all duration-300 group">
               <Download className="w-5 h-5 mr-2" />
-              <span>Download Swift! Driver App</span>
+              <a href='/#app-download'>Download Swift! Driver App</a>
             </button>
             <p className="text-gray-400 mt-4">
               Available on iOS and Android
@@ -192,7 +192,7 @@ const GetStartedAndFooter = () => {
                 </div>
                 <div className="flex items-center space-x-3 text-gray-600">
                   <Mail className="w-5 h-5" />
-                  <span>support@swift.co.za</span>
+                  <span>info@swift.co.za</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-600">
                   <MapPin className="w-5 h-5" />

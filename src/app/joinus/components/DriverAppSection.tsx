@@ -36,8 +36,6 @@ const DriverAppSection = () => {
     company: [
       { title: 'About Us', href: '/aboutus' },
       { title: 'Careers', href: '/careers' },
-      { title: 'Press', href: '/#' },
-      { title: 'Blog', href: '/#' }
     ],
     legal: [
       { title: 'Terms of Service', href: '/resources#terms' },

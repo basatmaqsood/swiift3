@@ -57,8 +57,6 @@ const NewsAndFooter = () => {
     company: [
       { title: 'About Us', href: '/aboutus' },
       { title: 'Careers', href: '/careers' },
-      { title: 'Press', href: '/#' },
-      { title: 'Blog', href: '/#' }
     ],
     legal: [
       { title: 'Terms of Service', href: '/resources#terms' },
@@ -159,7 +157,7 @@ const NewsAndFooter = () => {
                 </div>
                 <div className="flex items-center space-x-3 text-gray-600">
                   <Mail className="w-5 h-5" />
-                  <span>support@swift.co.za</span>
+                  <span>info@swift.co.za</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-600">
                   <MapPin className="w-5 h-5" />

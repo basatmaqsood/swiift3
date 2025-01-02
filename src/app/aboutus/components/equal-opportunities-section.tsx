@@ -129,7 +129,6 @@ const EqualOpportunitiesSection = () => {
               <ul className="space-y-4">
                 {[
                   "Employment Equity compliant",
-                  "B-BBEE Level 1 contributor",
                   "Skills Development focused",
                   "Local community partnerships"
                 ].map((item, index) => (

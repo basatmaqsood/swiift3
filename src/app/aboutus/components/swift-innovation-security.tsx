@@ -266,7 +266,7 @@ const InnovationSection = () => {
         <div className="text-center">
           <button className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 
             rounded-xl font-medium hover:bg-yellow-300 transition-all duration-300 group">
-            <span>Download Swift! App</span>
+            <a href='/#app-download'>Download Swift! App</a>
             <ArrowUpRight className="w-5 h-5 ml-2 group-hover:translate-x-1 
               group-hover:-translate-y-1 transition-transform" />
           </button>
