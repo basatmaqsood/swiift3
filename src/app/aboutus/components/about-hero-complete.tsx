@@ -69,6 +69,22 @@ const AboutHeroComplete = () => {
   ];
 
   useEffect(() => {
+    window.googleTranslateElementInit = () => {
+      if (window.google?.translate?.TranslateElement) {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: 'ur' },
+          'google_translate_element'
+        );
+      }
+    };
+
+    const script = document.createElement('script');
+    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  useEffect(() => {
     setIsVisible(true);
     
     // Metric rotation
@@ -104,14 +120,27 @@ const AboutHeroComplete = () => {
             </Link>
 
             <div className="relative hidden md:block">
+              <div id="google_translate_element" style={{display:'none'}}></div>
               <button
-                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              id='translate'
+                onClick={() => {
+                  console.log('I am clicking')
+                  const widget = document.querySelector('#google_translate_element');
+                  console.log(widget)
+                  if (widget) {
+                    (widget as HTMLElement).style.display = 'block';
+                  }
+                 const button = document.getElementById('translate');
+                 (button as HTMLElement).style.display = 'none'
+                }}
                 className="flex items-center space-x-2 bg-gray-800 text-white px-3 py-2 rounded-lg hover:bg-gray-700"
               >
                 <Globe className="w-6 h-6" />
                 <span>EN</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
+
+
 
               {isLangMenuOpen && (
                 <div className="absolute top-full left-0 mt-2 bg-gray-800 rounded-lg shadow-xl py-2 w-40 z-50">
@@ -126,15 +155,15 @@ const AboutHeroComplete = () => {
 
           {/* Right: Buttons */}
           <div className="flex items-center space-x-4">
-          <Link href="/support" className="hidden md:block text-white hover:bg-gray-800 px-4 py-2 rounded-lg">
+            <Link href="/support" className="hidden md:block text-white hover:bg-gray-800 px-4 py-2 rounded-lg">
               Support
             </Link>
-            <Link href="/joinus" className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-medium hover:bg-yellow-300">
+            <Link href="/joinus" className="hidden md:block bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-medium hover:bg-yellow-300">
               Register
             </Link>
             {/* Waffle Tab */}
             <div className="relative md:block">
-              
+
               <button
                 onClick={() => setIsWaffleMenuOpen(!isWaffleMenuOpen)}
                 className="flex items-center bg-gray-800 text-white px-3 py-2 rounded-lg hover:bg-gray-700"
@@ -151,7 +180,7 @@ const AboutHeroComplete = () => {
               )}
             </div>
 
-            
+
 
           </div>
         </div>
