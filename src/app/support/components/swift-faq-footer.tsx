@@ -13,6 +13,33 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
+const footerLinks = {
+  company: [
+    { title: 'About Us', href: '/aboutus' },
+    { title: 'Careers', href: '/careers' },
+    { title: 'Press', href: '/#' },
+    { title: 'Blog', href: '/#' }
+  ],
+  legal: [
+    { title: 'Terms of Service', href: '/resources#terms' },
+    { title: 'Privacy Policy', href: '/resources#privacy' },
+    { title: 'Cookie Policy', href: '/resources#privacy' },
+    { title: 'Disclaimer', href: '/resources#insurance' }
+  ],
+  support: [
+    { title: 'Help Center', href: '/support' },
+    { title: 'Safety', href: '/support' },
+    { title: 'Lost & Found', href: '/support' },
+    { title: 'Contact Us', href: '/support' }
+  ],
+  cities: [
+    { title: 'Johannesburg', href: '/careers#positions' },
+    { title: 'Cape Town', href: '/careers#positions' },
+    { title: 'Durban', href: '/careers#positions' },
+    { title: 'Pretoria', href: '/careers#positions' }
+  ]
+};
+
 const FAQSection = () => {
   const [activeRiderFaq, setActiveRiderFaq] = useState<number | null>(null);
   const [activeDriverFaq, setActiveDriverFaq] = useState<number | null>(null);
@@ -147,7 +174,7 @@ const FAQSection = () => {
         </div>
       </section>
 
-      {/* Footer */}
+
       <footer className="bg-white border-t border-gray-200">
         {/* Main Footer */}
         <div className="max-w-7xl mx-auto px-6 py-16">
@@ -159,8 +186,8 @@ const FAQSection = () => {
                   Swift<span className="text-yellow-400">!</span>
                 </h3>
                 <p className="text-gray-600 mt-2">
-                </p>
                   South Africa&apos;s most innovative e-hailing service.
+                </p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3 text-gray-600">
@@ -179,52 +206,25 @@ const FAQSection = () => {
             </div>
 
             {/* Links Columns */}
-            <div>
-              <h4 className="text-gray-900 font-semibold mb-4 uppercase text-sm">
-                Company
-              </h4>
-              <ul className="space-y-3">
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Careers</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">About</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Press</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Blog</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-gray-900 font-semibold mb-4 uppercase text-sm">
-                Support
-              </h4>
-              <ul className="space-y-3">
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Help Center</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Safety</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Legal</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Contact</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-gray-900 font-semibold mb-4 uppercase text-sm">
-                Legal
-              </h4>
-              <ul className="space-y-3">
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Terms of Service</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Cookie Policy</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Disclaimer</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-gray-900 font-semibold mb-4 uppercase text-sm">
-                Cities
-              </h4>
-              <ul className="space-y-3">
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Johannesburg</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Cape Town</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Durban</Link></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Pretoria</Link></li>
-              </ul>
-            </div>
+            {Object.entries(footerLinks).map(([category, links]) => (
+              <div key={category}>
+                <h4 className="text-gray-900 font-semibold mb-4 uppercase text-sm">
+                  {category}
+                </h4>
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link.title}>
+                      <a 
+                        href={link.href}
+                        className="text-gray-600 hover:text-gray-900 transition-colors"
+                      >
+                        {link.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -238,15 +238,12 @@ const FAQSection = () => {
               
               {/* Social Links */}
               <div className="flex space-x-6">
-                <Link href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
                   <Facebook className="w-5 h-5" />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+                </a>
+                <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
                   <Instagram className="w-5 h-5" />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

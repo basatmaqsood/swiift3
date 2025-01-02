@@ -64,28 +64,28 @@ const GetStartedAndFooter = () => {
 
   const footerLinks = {
     company: [
-      { title: 'About Us', href: '/about' },
+      { title: 'About Us', href: '/aboutus' },
       { title: 'Careers', href: '/careers' },
-      { title: 'Press', href: '/press' },
-      { title: 'Blog', href: '/blog' }
+      { title: 'Press', href: '/#' },
+      { title: 'Blog', href: '/#' }
     ],
     legal: [
-      { title: 'Terms of Service', href: '/terms' },
-      { title: 'Privacy Policy', href: '/privacy' },
-      { title: 'Cookie Policy', href: '/cookies' },
-      { title: 'Disclaimer', href: '/disclaimer' }
+      { title: 'Terms of Service', href: '/resources#terms' },
+      { title: 'Privacy Policy', href: '/resources#privacy' },
+      { title: 'Cookie Policy', href: '/resources#privacy' },
+      { title: 'Disclaimer', href: '/resources#insurance' }
     ],
     support: [
-      { title: 'Help Center', href: '/help' },
-      { title: 'Safety', href: '/safety' },
-      { title: 'Lost & Found', href: '/lost-found' },
-      { title: 'Contact Us', href: '/contact' }
+      { title: 'Help Center', href: '/support' },
+      { title: 'Safety', href: '/support' },
+      { title: 'Lost & Found', href: '/support' },
+      { title: 'Contact Us', href: '/support' }
     ],
     cities: [
-      { title: 'Johannesburg', href: '/cities/johannesburg' },
-      { title: 'Cape Town', href: '/cities/cape-town' },
-      { title: 'Durban', href: '/cities/durban' },
-      { title: 'Pretoria', href: '/cities/pretoria' }
+      { title: 'Johannesburg', href: '/careers#positions' },
+      { title: 'Cape Town', href: '/careers#positions' },
+      { title: 'Durban', href: '/careers#positions' },
+      { title: 'Pretoria', href: '/careers#positions' }
     ]
   };
 
@@ -240,9 +240,7 @@ const GetStartedAndFooter = () => {
                 <Link href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
                   <Instagram className="w-5 h-5" />
                 </Link>
-                <Link href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </Link>
+
               </div>
             </div>
           </div>

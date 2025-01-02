@@ -29,6 +29,7 @@ const PoliciesComplianceSection = () => {
     {
       category: "Driver Agreements",
       icon: <BadgeCheck className="w-6 h-6" />,
+      id:'aggrements',
       documents: [
         {
           title: "Driver Service Agreement",
@@ -63,6 +64,7 @@ const PoliciesComplianceSection = () => {
     {
       category: "Insurance Documents",
       icon: <Shield className="w-6 h-6" />,
+      id:'insurance',
       documents: [
         {
           title: "Insurance Policy Overview",
@@ -97,6 +99,7 @@ const PoliciesComplianceSection = () => {
     {
       category: "Privacy & Data",
       icon: <Lock className="w-6 h-6" />,
+      id:'privacy',
       documents: [
         {
           title: "Privacy Policy",
@@ -131,6 +134,7 @@ const PoliciesComplianceSection = () => {
     {
       category: "Terms of Service",
       icon: <Scale className="w-6 h-6" />,
+      id:'terms',
       documents: [
         {
           title: "Platform Terms of Service",
@@ -217,9 +221,9 @@ const PoliciesComplianceSection = () => {
         </div>
 
         {/* Document Categories */}
-        <div className="space-y-12">
+        <div className="space-y-12" >
           {legalDocuments.map((category, index) => (
-            <div key={index} className="bg-gray-50 rounded-2xl p-8">
+            <div key={index} className="bg-gray-50 rounded-2xl p-8"  id={category.id}>
               <div className="flex items-center space-x-4 mb-8">
                 <div className="bg-yellow-400 rounded-xl p-4">
                   {category.icon}

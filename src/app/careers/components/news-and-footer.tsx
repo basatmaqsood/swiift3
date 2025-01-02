@@ -55,105 +55,38 @@ const NewsAndFooter = () => {
 
   const footerLinks = {
     company: [
-      { title: 'About Us', href: '/about' },
+      { title: 'About Us', href: '/aboutus' },
       { title: 'Careers', href: '/careers' },
-      { title: 'Press', href: '/press' },
-      { title: 'Blog', href: '/blog' }
+      { title: 'Press', href: '/#' },
+      { title: 'Blog', href: '/#' }
     ],
-    partners: [
-      { title: 'Become a Driver', href: '/drive' },
-      { title: 'Fleet Solutions', href: '/fleet' },
-      { title: 'Security Services', href: '/security' },
-      { title: 'Business Travel', href: '/business' }
+    legal: [
+      { title: 'Terms of Service', href: '/resources#terms' },
+      { title: 'Privacy Policy', href: '/resources#privacy' },
+      { title: 'Cookie Policy', href: '/resources#privacy' },
+      { title: 'Disclaimer', href: '/resources#insurance' }
     ],
-    safety: [
-      { title: 'Safety Center', href: '/safety' },
-      { title: 'Insurance', href: '/insurance' },
-      { title: 'COVID-19 Response', href: '/covid' },
-      { title: 'Emergency Support', href: '/emergency' }
+    support: [
+      { title: 'Help Center', href: '/support' },
+      { title: 'Safety', href: '/support' },
+      { title: 'Lost & Found', href: '/support' },
+      { title: 'Contact Us', href: '/support' }
     ],
     cities: [
-      { title: 'Johannesburg', href: '/cities/johannesburg' },
-      { title: 'Cape Town', href: '/cities/cape-town' },
-      { title: 'Durban', href: '/cities/durban' },
-      { title: 'Pretoria', href: '/cities/pretoria' }
+      { title: 'Johannesburg', href: '/careers#positions' },
+      { title: 'Cape Town', href: '/careers#positions' },
+      { title: 'Durban', href: '/careers#positions' },
+      { title: 'Pretoria', href: '/careers#positions' }
     ]
   };
 
   return (
     <>
+    {/* 
+     */}
       <section className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-block bg-yellow-400/10 rounded-full px-6 py-2 mb-6">
-              <span className="text-gray-900 font-medium">Latest Updates</span>
-            </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              News & Updates<span className="text-yellow-400">.</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Stay informed about Swift&apos;s latest developments, community initiatives, and security updates
-            </p>
-          </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
-            {newsCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-2 rounded-full font-medium transition-all
-                  ${activeCategory === category.id 
-                    ? 'bg-yellow-400 text-black' 
-                    : 'bg-white text-gray-600 hover:bg-gray-100'}`}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-
-          {/* News Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            {newsItems
-              .filter(item => activeCategory === 'all' || item.category === activeCategory)
-              .map((item) => (
-                <div key={item.id} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-                  <div className="relative aspect-video overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-medium">
-                        {item.tag}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center text-gray-500 text-sm mb-3">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {item.date}
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-400 transition-colors">
-                      {item.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4">
-                      {item.description}
-                    </p>
-                    
-                    <button className="text-yellow-400 font-medium inline-flex items-center hover:text-yellow-500 transition-colors group">
-                      Read Full Story
-                      <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-            ))}
-          </div>
 
           {/* App Download Section */}
           <div className="bg-black rounded-3xl overflow-hidden">
@@ -274,9 +207,7 @@ const NewsAndFooter = () => {
                 <Link href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
                   <Instagram className="w-5 h-5" />
                 </Link>
-                <Link href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </Link>
+
               </div>
             </div>
           </div>

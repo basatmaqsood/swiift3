@@ -118,6 +118,14 @@ const CareersHeroSection = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 translate-x-1/2 translate-y-1/2 bg-yellow-400/5 rounded-full blur-3xl" />
       </div>
 
+      <div className="absolute inset-0">
+          <img
+            src='career-bg.jpg'
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/70 to-gray-900/60" />
+        </div>
       <div className="max-w-7xl mx-auto px-6 flex flex-col justify-center min-h-screen relative">
         {/* Navigation */}
         {/* Fixed Navigation */}

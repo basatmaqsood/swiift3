@@ -13,28 +13,28 @@ import {
 const DownloadAndFooter = () => {
   const footerLinks = {
     company: [
-      { title: 'About Us', href: '/' },
-      { title: 'Careers', href: '/' },
-      { title: 'Press', href: '/' },
-      { title: 'Blog', href: '/' }
+      { title: 'About Us', href: '/aboutus' },
+      { title: 'Careers', href: '/careers' },
+      { title: 'Press', href: '/#' },
+      { title: 'Blog', href: '/#' }
     ],
     legal: [
-      { title: 'Terms of Service', href: '/' },
-      { title: 'Privacy Policy', href: '/' },
-      { title: 'Cookie Policy', href: '/' },
-      { title: 'Disclaimer', href: '/' }
+      { title: 'Terms of Service', href: '/resources#terms' },
+      { title: 'Privacy Policy', href: '/resources#privacy' },
+      { title: 'Cookie Policy', href: '/resources#privacy' },
+      { title: 'Disclaimer', href: '/resources#insurance' }
     ],
     support: [
-      { title: 'Help Center', href: '/' },
-      { title: 'Safety', href: '/' },
-      { title: 'Lost & Found', href: '/' },
-      { title: 'Contact Us', href: '/' }
+      { title: 'Help Center', href: '/support' },
+      { title: 'Safety', href: '/support' },
+      { title: 'Lost & Found', href: '/support' },
+      { title: 'Contact Us', href: '/support' }
     ],
     cities: [
-      { title: 'Johannesburg', href: '/' },
-      { title: 'Cape Town', href: '/' },
-      { title: 'Durban', href: '/' },
-      { title: 'Pretoria', href: '/' }
+      { title: 'Johannesburg', href: '/careers#positions' },
+      { title: 'Cape Town', href: '/careers#positions' },
+      { title: 'Durban', href: '/careers#positions' },
+      { title: 'Pretoria', href: '/careers#positions' }
     ]
   };
 
@@ -184,9 +184,7 @@ const DownloadAndFooter = () => {
                 <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
+
               </div>
             </div>
           </div>
