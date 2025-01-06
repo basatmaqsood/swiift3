@@ -306,7 +306,7 @@ const BusinessOperationsSection = () => {
             <div className="mt-8 bg-gray-800 rounded-xl p-4 text-center">
               <div className="aspect-[16/9] relative">
                 <img
-                  src="/api/placeholder/1200/675" 
+                  src="/map.jpg" 
                   alt="Coverage Map"
                   className="rounded-lg w-full h-full object-cover"
                 />
